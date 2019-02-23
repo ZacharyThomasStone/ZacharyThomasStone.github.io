@@ -37,10 +37,11 @@
             {{ content }}
           </div>
         {% endunless %}
-        
+
         {% unless posts_total == 0 %}
         {% include thoughts.html %}
-      {% endunless %}
+
+        {% endunless %}
 
         {% include projects.html %}
 
