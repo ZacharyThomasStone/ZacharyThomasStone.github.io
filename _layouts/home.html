@@ -8,21 +8,21 @@
       {{ content }}
     </div>
 
+    {% unless posts_total == 0 %}
+      <div class="my-6">
+        {% include thoughts.html %}
+      </div>
+      
+    {% endunless %}
     <div class="my-6">
-      {% include thoughts.html %}
+      {% include projects.html %}
     </div>
 
     {% if site.topics %}
       <div class="my-6">
-        {% include projects.html %}
-      </div>
-    {% endif %}
-
-    {% unless posts_total == 0 %}
-      <div class="my-6">
         {% include interests.html %}
       </div>
-    {% endunless %}
+    {% endif %}
   </div>
 {% else %}
   <div class="d-md-flex {% unless site.style == 'dark' %}border-md-bottom{% endunless %}">
